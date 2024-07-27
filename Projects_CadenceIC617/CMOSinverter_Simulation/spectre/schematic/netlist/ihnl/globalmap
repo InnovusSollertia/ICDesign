@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+CMOSinverter_001/CMOSinverter_Simulation/schematic CMOSinverter_Simulation
+CMOSinverter_001/CMOSinverter/schematic CMOSinverter
+$endmodel
+$net
+gnd! 0
+vdd! vdd!
+$endnet
+$param
+gnd _gpar0
+$endparam

@@ -1,0 +1,19 @@
+
+// Library name: CMOSinverter_001
+// Cell name: CMOSinverter
+// View name: schematic
+subckt CMOSinverter GND VDD Vin Vout
+    FirstINV (Vout Vin GND GND) gpdk090_nmos1v w=(120n) l=100n as=69.6f \
+        ad=69.6f ps=1.16u pd=1.16u m=(1)*(1) simM=(1)*(1)
+    FirstPMOS (Vout Vin VDD VDD) gpdk090_pmos1v w=(120n) l=100n as=69.6f \
+        ad=69.6f ps=1.16u pd=1.16u m=(1)*(1) simM=(1)*(1)
+ends CMOSinverter
+// End of subcircuit definition.
+
+// Library name: CMOSinverter_001
+// Cell name: CMOSinverter_Simulation
+// View name: schematic
+I0 (0 vdd! Vin Vout) CMOSinverter
+V0 (vdd! 0) vsource dc=1 type=dc
+V1 (Vin 0) vsource type=pulse val0=1 val1=0 period=20n rise=50p \
+        fall=_gpar0 width=10n

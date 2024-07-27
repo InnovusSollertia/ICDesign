@@ -1,0 +1,5 @@
+
+// Library name: CMOSinverter_001
+// Cell name: CMOSinverter
+// View name: schematic
+subckt CMOSinverter GND VDD Vin Vout

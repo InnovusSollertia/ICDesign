@@ -1,0 +1,8 @@
+
+// Library name: CMOSinverter_001
+// Cell name: CMOSinverter_Simulation
+// View name: schematic
+I0 (0 vdd! Vin Vout) CMOSinverter
+V0 (vdd! 0) vsource dc=1 type=dc
+V1 (Vin 0) vsource type=pulse val0=1 val1=0 period=20n rise=50p \
+        fall=_gpar0 width=10n
